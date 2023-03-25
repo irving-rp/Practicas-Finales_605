@@ -1,3 +1,16 @@
+<?php
+error_reporting( 0 );
+if (isset($_POST [ 'btnsum' ])) {
+$numero1 = $_POST [ 'caja1' ];
+$numero2 = $_POST [ 'caja2' ];
+$numero1 =( int ) $numero1;
+$numero2 =( int ) $numero2;
+$resultado = $numero1 + $numero2;
+$valor = $resultado ;
+echo  $valor ;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +34,22 @@
 <?php include "include/menu.php";  ?>
 
 <!-- terminaoffcanvas -->
-   <script src="js/bootstrap.min.js"></script> 
+   
+<div class="col-lg-12">
+        <div class="row">
+            <h1 class="text-center py-2 text-success">Sumas</h1>
+        </div>
+        <div class="row">
+            <form action= "<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
+            <input type="text" name="caja1" required>
+            <input type="text" name="caja2" required>
+            <input type="submit" name="btnsum" value="calcular">
+
+           </form>
+        </div>
+    </div>
+
+
+<script src="js/bootstrap.min.js"></script> 
 </body>
 </html>

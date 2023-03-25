@@ -1,0 +1,1 @@
+Create Table plantel(Id_plantel int auto_increment not null, nombrep Varchar (75) not null, clavep Varchar (55) not null, direccion Varchar (255) not null, telefonop Varchar (25) not null, responsablep Varchar (75) not null, Primary Key(Id_plantel)) ENGINE=INNODB
